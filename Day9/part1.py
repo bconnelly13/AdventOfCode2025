@@ -10,18 +10,12 @@ def main():
             intCoords.append(int(coord))
         points.append(intCoords)
 
-    # print(points)
-    point1 = None
-    point2 = None
     max_area = -1
     for i in range(len(points)):
         for j in range(i+1, len(points)):
             area = findArea(points[i], points[j])
-            # print(points[i], points[j], area)
             if area > max_area:
                 max_area = area
-                point1 = points[i]
-                point2 = points[j]
     
     print("Max Area:", max_area)
 
